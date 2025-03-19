@@ -1,0 +1,41 @@
+{
+  "configurations": [
+    {
+      "type": "cppvsdbg",
+      "request": "launch",
+      "name": "Launch C++ Program",
+      "program": "${workspaceFolder}/${input:cppExecutable}",
+      "preLaunchTask": "build-cpp"
+    },
+    {
+      "type": "coreclr",
+      "request": "launch",
+      "name": "Launch C# Program",
+      "program": "${workspaceFolder}/${input:csExecutable}",
+      "preLaunchTask": "build-cs"
+    }
+  ],
+  "inputs": [
+    {
+      "type": "pickString",
+      "id": "cppExecutable",
+      "description": "Select the C++ executable to debug",
+      "options": [
+        "int.exe",
+        "main.exe",
+        "void.exe"
+      ]
+    },
+    {
+      "type": "pickString",
+      "id": "csExecutable",
+      "description": "Select the C# executable to debug",
+      "options": [
+        "Program v03.exe",
+        "Programm v01.exe",
+        "Programm vo2.exe",
+        "Programm.exe"
+      ]
+    }
+  ]
+}
